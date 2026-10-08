@@ -1,0 +1,28 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "",
+  "summary": {
+    "title": "Digital Bank Credit Scoring - Threat Model",
+    "owner": "",
+    "description": "Digital bank che offre un servizio di credit scoring basato su un motore AI. Il sistema riceve richieste di prestito dai clienti, calcola un punteggio numerico di affidabilità e restituisce l'esito. Le richieste sospette vengono revisionate da un operatore interno.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}

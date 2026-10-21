@@ -615,6 +615,19 @@
                   "new": false,
                   "number": 6,
                   "score": ""
+                },
+                {
+                  "id": "e9c7a106-1937-4535-8d73-cab3f510f330",
+                  "title": "Abuso dei privilegi dell'applicazione",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Un attaccante che compromette l'applicazione eredita i suoi permessi su database, motore AI e notifiche, e può leggere o alterare dati ben oltre il proprio ruolo.",
+                  "mitigation": "Permessi minimi per ogni connessione, credenziali separate per ogni servizio, isolamento di rete tra i componenti.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -623,15 +636,8 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1777,6 +1783,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 7
   }
 }

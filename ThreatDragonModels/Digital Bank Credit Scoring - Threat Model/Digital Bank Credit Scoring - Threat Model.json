@@ -1299,6 +1299,9 @@
               "height": 130
             },
             "attrs": {
+              "text": {
+                "text": "Motore AI Scoring"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1393,7 +1396,7 @@
             "id": "e7f1bd68-9af1-48d7-bfb7-a7f19ad1d0e4",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Motore AI Scoring",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1575,6 +1578,78 @@
               "x": 1000,
               "y": 170
             }
+          },
+          {
+            "position": {
+              "x": 100,
+              "y": -10
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Confine 1 - Rete Pubblica"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "3a205550-7c05-41c7-b16b-89e92f6f41a4",
+            "zIndex": 18,
+            "data": {
+              "type": "tm.Text",
+              "name": "Confine 1 - Rete Pubblica",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 716,
+              "y": -40
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Confine 2 - Perimetro applicativo"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "23353c50-9ef4-40ea-b897-1b39d8e872bb",
+            "zIndex": 19,
+            "data": {
+              "type": "tm.Text",
+              "name": "Confine 2 - Perimetro applicativo",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 888.75,
+              "y": 470
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Confine 3 - Dati sensibili"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "4e4cb7fb-570d-448b-9d17-a9d71516d27f",
+            "data": {
+              "type": "tm.Text",
+              "name": "Confine 3 - Dati sensibili",
+              "hasOpenThreats": false
+            },
+            "zIndex": 20
           }
         ]
       }

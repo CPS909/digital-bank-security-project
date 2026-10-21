@@ -1303,8 +1303,8 @@
                 "text": "Motore AI Scoring"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1401,12 +1401,54 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ea0cb39a-70d1-4db0-9b19-2c2b6974f703",
+                  "title": "Data poisoning: dati manipolati falsano il punteggio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaccante o un errore di processo altera i dati cliente usati come input. Il modello restituisce un punteggio falsato, con rischio di concedere o negare credito in modo errato.",
+                  "mitigation": "Validazione degli input, controlli di integrità sui dataset",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "8ec37032-04f4-4ae4-9e1e-51ec9cc6e188",
+                  "title": "Model extraction tramite query ripetute",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un attaccante interroga il modello molte volte per ricostruirne il comportamento o aggirarne i criteri.",
+                  "mitigation": "Rate limiting sulle inferenze, monitoraggio di pattern di query anomali, autenticazione obbligatoria.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1630,7 +1672,7 @@
           {
             "position": {
               "x": 888.75,
-              "y": 470
+              "y": 480
             },
             "size": {
               "width": 112.5,
@@ -1656,6 +1698,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 2
   }
 }

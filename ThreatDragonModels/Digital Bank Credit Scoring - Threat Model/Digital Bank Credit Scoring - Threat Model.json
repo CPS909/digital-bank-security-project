@@ -357,8 +357,8 @@
                 "text": "Auth Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -455,12 +455,41 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d197bcbe-85c0-4908-a449-a0bc60945e8a",
+                  "title": "Furto d'identità del cliente",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un attaccante si fa passare per un cliente reale usando credenziali rubate, phishing o MFA fatigue (richieste di conferma ripetute finché l'utente cede), e accede al sistema con un'identità legittima.",
+                  "mitigation": "MFA resistente al phishing, limite ai tentativi di accesso, blocco dell'account dopo troppi errori, rilevamento di accessi anomali.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1442,13 +1471,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1465,11 +1487,13 @@
                 "text": "Database clienti"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1566,13 +1590,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0ac123c8-76d6-434d-b0da-1cd1660d1971",
+                  "title": "Accesso non autorizzato ai dati dei clienti",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un attaccante o un utente interno accede al database e copia dati anagrafici e finanziari dei clienti, con danno di riservatezza e rischio normativo (GDPR).",
+                  "mitigation": "Cifratura dei dati a riposo, accessi con privilegi minimi, audit log di ogni lettura, monitoraggio di accessi anomali.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "3d843e97-b4f3-45dd-b35b-4a32bc843bb4",
+                  "title": "Alterazione dei dati di un cliente per falsare il punteggio",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un attaccante modifica reddito o storico di un cliente, così il motore AI assegna un punteggio più alto e viene concesso un credito non dovuto.",
+                  "mitigation": "Permessi di scrittura minimi, log immutabili delle modifiche, controllo incrociato dei dati con fonti esterne, doppia approvazione sulle modifiche sensibili.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1698,6 +1755,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 5
   }
 }

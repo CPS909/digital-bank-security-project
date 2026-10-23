@@ -30,8 +30,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "d9074090-2bff-4ba0-9795-f0d5a092526d",
             "zIndex": -1,
+            "id": "d9074090-2bff-4ba0-9795-f0d5a092526d",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
@@ -55,6 +55,7 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "zIndex": -1,
             "id": "6f786dcf-98a2-4fe9-a541-b1656b899969",
             "data": {
               "type": "tm.BoundaryBox",
@@ -73,8 +74,7 @@
                 "522f10f6-a32b-46f9-a59e-dae7c300cef1",
                 "23d84d43-2118-490d-a091-2fccfc3f89c0"
               ]
-            },
-            "zIndex": -1
+            }
           },
           {
             "position": {
@@ -87,6 +87,7 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "zIndex": -1,
             "id": "175e1991-f0d9-48e1-98c6-3ad5c84a01f8",
             "data": {
               "type": "tm.BoundaryBox",
@@ -103,8 +104,7 @@
                 "e7f1bd68-9af1-48d7-bfb7-a7f19ad1d0e4",
                 "cc3a33ec-ed6f-4533-9fe3-dd63e1c38e20"
               ]
-            },
-            "zIndex": -1
+            }
           },
           {
             "position": {
@@ -999,8 +999,8 @@
                 "text": "Operatore interno"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1097,9 +1097,34 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "91b7fe60-cd2b-453b-9811-cad221bfbcf0",
+                  "title": "Impersonificazione di un operatore interno",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un attaccante usa le credenziali rubate di un operatore per accedere alle richieste sospette e modificare i punteggi come se fosse lui.",
+                  "mitigation": "MFA resistente al phishing per gli operatori, accessi solo da rete aziendale, monitoraggio di accessi anomali.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1722,8 +1747,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "3a205550-7c05-41c7-b16b-89e92f6f41a4",
             "zIndex": 18,
+            "id": "3a205550-7c05-41c7-b16b-89e92f6f41a4",
             "data": {
               "type": "tm.Text",
               "name": "Confine 1 - Rete Pubblica",
@@ -1746,8 +1771,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "23353c50-9ef4-40ea-b897-1b39d8e872bb",
             "zIndex": 19,
+            "id": "23353c50-9ef4-40ea-b897-1b39d8e872bb",
             "data": {
               "type": "tm.Text",
               "name": "Confine 2 - Perimetro applicativo",
@@ -1770,19 +1795,19 @@
             },
             "visible": true,
             "shape": "td-text-block",
+            "zIndex": 20,
             "id": "4e4cb7fb-570d-448b-9d17-a9d71516d27f",
             "data": {
               "type": "tm.Text",
               "name": "Confine 3 - Dati sensibili",
               "hasOpenThreats": false
-            },
-            "zIndex": 20
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 7
+    "threatTop": 8
   }
 }
